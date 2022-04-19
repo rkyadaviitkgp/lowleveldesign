@@ -28,4 +28,10 @@ public class InMemoryFreeChunckProvider implements FreeChunckProvider {
         queue.add(inMemorySpaceInfo);
         return true;
     }
+
+    @Override
+    public void compactFreeChunk(){
+        // take each free chunk info and check if it can be merged with another chunk to get bigger chunk
+        // after processing each chunk again puch all chunk into memory
+    }
 }

@@ -27,4 +27,10 @@ public class InMemoryChunckInfo extends ChunckInfo {
     public void setEndIndex(int endIndex) {
         this.endIndex = endIndex;
     }
+
+    public InMemoryChunckInfo splitChunk(int size){
+        InMemoryChunckInfo inMemoryChunckInfo = new InMemoryChunckInfo(this.getStartIndex()+size, this.getEndIndex());
+        this.setEndIndex(this.getStartIndex()+size-1);
+        return inMemoryChunckInfo;
+    }
 }
