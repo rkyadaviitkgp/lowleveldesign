@@ -60,6 +60,7 @@ public class InMemoryStorageManager implements StorageManager {
     public boolean delete(String fileName) {
         ArrayList<InMemoryChunckInfo> list = fileStorageInfo.get(fileName);
         for(InMemoryChunckInfo inMemoryChunckInfo : list){
+            inMemoryLowLevelStorage.deleteContent(inMemoryChunckInfo);
             freeSpaceProvider.addFreeChunck(inMemoryChunckInfo);
         }
         fileStorageInfo.remove(fileName);

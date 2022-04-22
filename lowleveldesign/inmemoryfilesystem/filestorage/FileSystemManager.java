@@ -18,7 +18,7 @@ public class FileSystemManager {
 
     public char[] readFile(String fileName){
         char arr[] = fileSystem.readFile(fileName);
-        System.out.println(Arrays.toString(arr));
+        System.out.println("File content for file " + fileName + " is " + Arrays.toString(arr));
         return arr;
     }
 

@@ -3,12 +3,12 @@ package code.lowleveldesign.parkinglot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParkingDemo {
+public class ParkingFunctionalityDemo {
 
     ParkingSystem parkingSystem;
     public static final int MAX_NO = 30;
 
-    public ParkingDemo() {
+    public ParkingFunctionalityDemo() {
         List<ParkingSlot> list = new ArrayList<>();
         //create 10 parking slot
         for(int i=0; i<MAX_NO; i++){
@@ -26,7 +26,7 @@ public class ParkingDemo {
     }
 
     public static void main(String[] args) {
-        ParkingDemo parkingDemo = new ParkingDemo();
+        ParkingFunctionalityDemo parkingDemo = new ParkingFunctionalityDemo();
         ParkingSystem parkingSystem = parkingDemo.parkingSystem;
 
         //ParkedVehicle parkedVehicle = new ParkedVehicle("Wb 38 AG 5777", VehicleColour.RED, VehicleType.SMALL);

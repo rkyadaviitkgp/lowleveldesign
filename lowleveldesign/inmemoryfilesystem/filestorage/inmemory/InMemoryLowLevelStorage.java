@@ -24,13 +24,19 @@ public class InMemoryLowLevelStorage {
     }
 
     public List<Character> readContent(InMemoryChunckInfo inMemoryChunckInfo){
-        printRawMemory();
+        //printRawMemory();
 
         List<Character> ans = new ArrayList<>();
         for(int i=inMemoryChunckInfo.getStartIndex(); i<=inMemoryChunckInfo.getEndIndex(); i++){
            ans.add(memory[i]);
         }
         return ans;
+    }
+
+    public void deleteContent(InMemoryChunckInfo inMemoryChunckInfo){
+        for(int i=inMemoryChunckInfo.getStartIndex(); i<=inMemoryChunckInfo.getEndIndex(); i++){
+            memory[i] = '\0';
+        }
     }
 
     private void printRawMemory(){

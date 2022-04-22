@@ -17,6 +17,7 @@ public class InMemoryFileSystemDemo {
         fileSystemManager.createFile("file2", filecontent1);
         fileSystemManager.deleteFile("file1");
         fileSystemManager.createFile("file3", filecontenet2);
+        fileSystemManager.deleteFile("file2");
 //        fileSystemManager.readFile("file1");
 //        fileSystemManager.readFile("file2");
         fileSystemManager.readFile("file3");
